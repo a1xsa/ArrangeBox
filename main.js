@@ -148,6 +148,7 @@
             for (let item of mainArr.selectedleft) {
                 if (item.parentElement === mainArr.firstContainer) {
                     mainArr.secondContainer.appendChild(item);
+                    item.style.display = 'block';
                     item.classList.toggle("active");
                 }
             }
@@ -161,6 +162,7 @@
         } else if (event.target.id === mainArr.rightAll.id) {
             Array.from(mainArr.firstContainer.querySelectorAll(".containerElem")).forEach((item) => {
                 mainArr.secondContainer.appendChild(item);
+                item.style.display = 'block';
                 item.classList.remove("active");
             });
             mainArr.selectedleft = [];
